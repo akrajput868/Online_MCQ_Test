@@ -1,0 +1,59 @@
+{% extends 'MCQ_Test/adminbase.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="py-3">
+
+
+<div class=" container-fluid">
+<div class="text-center text-info">
+<h5>TEACHERS</h5>
+<hr class="bg-info">
+</div>
+{% if tech %}
+<table class="table">
+  <thead class="bg-info text-white">
+    <tr>
+      <th scope="col">S/N</th>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for te in tech %}
+    <tr>
+      <th scope="row">{{te.id}}</th>
+      <td>{{te.username}}</td>
+      <td>{{te.name}}</td>
+      <td>{{te.mobile}}</td>
+      <td>{{te.subject}}</td>
+      <td>{{te.email}}</td>
+      <td>{{te.password}}</td>
+      <td>
+          <a href="{% url 'editteacher' te.id %}" class='btn btn-warning btn-sm'>Edit</a>
+          <form action="{% url 'deleteteacher' te.id %}" method="POST" class='d-inline'>
+            {% csrf_token %}
+            <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+          </form>
+      </td>
+    </tr>
+  {% endfor %}
+    
+  </tbody>
+{% endif %}
+</table>
+<div class="text-center">
+    <a href="{% url 'addteacher' %}" class="btn btn-info">Add New Teacher</a>
+</div>
+
+</div>
+</div> 
+
+
+{% endblock content %}

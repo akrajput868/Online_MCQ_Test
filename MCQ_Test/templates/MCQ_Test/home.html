@@ -1,0 +1,131 @@
+{% extends 'MCQ_Test/base.html' %}
+{% load static %}
+
+{% block h %} active{% endblock h %}
+{% block content %}
+
+
+
+
+<div class="container py-5 z-depth-1">
+
+    
+ 
+ 
+    <!--Section: Content-->
+    <section class=" text-center text-lg-left dark-grey-text">
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-5 mb-4 py-4 mb-md-0">
+
+          <h3 class="font-weight-bold">MCQ TEST</h3>
+          <hr class="bg-info">
+          <p class="text-muted">A web application for online MCQ Quiz Test in real time.<br> The entire MCQ Test process is simplified and Test are taken from anywhere</p>
+
+            <a href="{% url 'studentlogin'%}" type="button" class="btn btn-success"> Student Login</a>
+            <a href="{% url 'teacherlogin'%}" type="button" class="btn btn-info">Teacher Login</a>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-7 mb-4 mb-md-0">
+
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="{%  static 'MCQ_Test/images/1234.jpg' %}" class="img-fluid"
+              alt="">
+            
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+    
+
+  </div>
+
+
+
+
+  <div class="container  z-depth-1">
+
+    <style>
+      .w-200 {
+        width: 200px;
+      }
+    </style>
+    
+    <!--Section: Content-->
+    <section class="team-section text-center dark-grey-text">
+      <h4 class="text-info">Our Team</h4>
+      <hr  >
+      <!-- Section description -->
+      <!-- Grid row -->
+      <div class="row py-4">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mb-6">
+  
+          <div class="w-200 mx-auto mb-6">
+            <img src="{%  static 'MCQ_Test/images/2.jpg' %}" class="z-depth-1 rounded-circle img-fluid" alt="smaple image">
+          </div>
+          <h5 class=" py-2 text-info font-weight-bold">Navin Ranjan</h5>
+          <p class="text-muted ">Frontend and Backend Developer</p>
+          <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0 red-text">
+            <li><i class="fab fa-linkedin-in mx-2"></i></li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+        
+        <!-- Grid column -->
+        <div class="col-md-6 mb-6">
+  
+          <div class="w-200 mx-auto mb-6">
+            <img src="{%  static 'MCQ_Test/images/3.jpg' %}" class="z-depth-1 rounded-circle img-fluid mx-auto" alt="smaple image">
+          </div>
+          <h5 class=" py-2 text-info font-weight-bold">Ankit Kumar</h5>
+          <p class="text-muted">Backend Developer</p>
+          
+          <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0 red-text">
+            <li><i class="fab fa-twitter mx-2"></i></li>
+            
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+        
+        <!-- Grid column -->
+        
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+      
+    </section>
+    <!--Section: Content-->
+  
+  
+  </div>      
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
