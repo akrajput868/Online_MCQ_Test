@@ -1,0 +1,31 @@
+{% extends 'Student/studentbase.html' %}
+{% load static %}
+
+{% block content %}
+<div class="p-5">
+<div class="container p-4" style=" background-color:#e6f2ff">
+    <div class="row">
+        <div class="col-md-12 text-center text-info">
+            <h5> MCQ Test Paper</h5>
+            <hr>
+        </div>
+            {%for s in sub%}
+        <div class="col-md-3 py-2">
+            <a href="{% url 'examinstruction' s.id %}" class="card text-white text-center bg-info ">
+                <div class="card-body">
+                    <h5 >{{s.subject}}</h5>
+                </div>
+            </a>
+        </div>
+                {%endfor%}
+    
+
+        
+    </div>    
+ </div> 
+ </div>       
+
+
+{% endblock content %}
+
+
