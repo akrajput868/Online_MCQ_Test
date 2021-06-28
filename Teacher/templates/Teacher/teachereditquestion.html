@@ -1,0 +1,73 @@
+{% extends 'Teacher/teacherbase.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="container py-5">
+        <div class="row justify-content-center align-items-center ">
+      
+          <div class="col-md-6 " style="background-color: rgb(227, 239, 250);">
+                   
+              <div class="col-md-12 py-4">
+                  <div class="text-center text-info" >
+                      <h4>Question Edit</h4>
+                      
+                  </div>
+                      <hr class="bg-info">
+                           <form action="{% url 'questionedit' ques.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label> Question </label>
+                                <textarea class="form-control" rows="3" name="aquestion" Required>{{ques.question}}</textarea>
+                            </div>
+                            <div class="form-group">
+                              <label >Mark</label>
+                              <input type="number" class="form-control" name="amark"Required value="{{ques.marks}}" >
+                            </div>
+                            <div class="form-group">
+                              <label >Option1</label>
+                              <input type="text" class="form-control" name="aoption1" Required value="{{ques.option1}}"  >
+                            </div>
+                            <div class="form-group">
+                              <label >Option2</label>
+                              <input type="text" class="form-control" name="aoption2" Required value="{{ques.option2}}"  >
+                            </div>
+                            <div class="form-group">
+                              <label >Option3</label>
+                              <input type="text" class="form-control" name="aoption3" Required value="{{ques.option3}}"  >
+                            </div>
+                            <div class="form-group">
+                              <label >Option4</label>
+                              <input type="text" class="form-control" name="aoption4" Required value="{{ques.option4}}"  >
+                            </div>
+                            <div class="form-group">
+                              <label >Answer</label>
+                              <input type="text" class="form-control" name="aanswer" Required value="{{ques.answer}}"  >
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Update Question</button>
+                             
+                             
+                          </form>
+
+                          <div class='col-sm-4'>
+            
+                          </div>   
+                          
+                      </div>
+                      
+                      
+                   </div>  
+            </div>
+        </div>
+        
+      </div>
+
+
+
+
+{% endblock content %}
+
+
